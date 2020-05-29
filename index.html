@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header"> 
+            <div class="header-1">
+                <ul>
+                    <li>
+                        Aashray Pandya
+                    </li>
+                    <li>
+                        Visual designer
+                    </li>
+                </ul>
+            </div>
+            <div class="header-2 scroll" data-direction="vertical" data-rateY="-0.01">
+                <ul>
+                    <li>
+                        <span>Hello! I'm Aashray, based in Pune</span><br />
+                        <span>with experience in creating highly polished</span><br />
+                        <span>Interfaces for the web and mobile.</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="header-3">
+                <ul>
+                    <li>
+                        About
+                    </li>
+                    <li>
+                        Project
+                    </li>
+                </ul>
+            </div>
+            <div class="header-4">
+                <ul>
+                    <li>
+                        Behance
+                    </li>
+                    <li>
+                        Dribble
+                    </li>
+                    <li>
+                        Email
+                    </li>
+                </ul>
+            </div>
+    </header>
+
+    <section class="section-3 scroll p-s-3">
+            <div class="text-container" data-rateY="-2"  data-direction="horizontal">
+                <div class="marq scroll" data-rateX="0.2" data-direction="horizontal">
+                    I CREATE AWESOME
+                </div>
+                <div class="marq scroll" data-rateX="-0.2" data-direction="horizontal">
+                    INTERFACE AND DESIGN
+                </div>
+            </div>
+            <div class="image-container scroll" data-ratey="-0.4" data-direction="vertical">
+            </div>
+    </section>
+
+
+    <section class="section-company p-s-3">
+        <div class="heading-primary">
+            Experience
+        </div>
+        <div class="company">
+            <div class="company-container">
+                <div class="image-section company-1"></div>
+                <div class="duration-section"> 
+                    <div class="date">July 2019 - Current</div>
+                    <div class="description">Currently working as senior front end developer on enterprise level telecom project. Working on tech such as React, Redux, SCSS, Webpack.</div>
+                </div>
+            </div>  
+            <div class="company-container">
+                <div class="duration-section"> 
+                    <div class="date"> Nov 2018 - July 2019 </div>
+                    <div class="description"> Worked as a fullstack developer and wrote very fast shipping code for various project. Worked on tech such as Nodejs, React native, React, Redux, CSS, SQL.</div>
+                </div>
+                <div class="image-section company-2"></div>
+            </div>
+            <div class="company-container">
+                <div class="image-section company-3"></div>
+                <div class="duration-section"> 
+                    <div class="date">Jan 2018  - Nov 2018</div>
+                    <div class="description">Worked as a fullstack developer and worked on many projects using technology such as Nodejs, Mongodb, SQL, React, Redux, CSS.</div>
+                </div>
+            </div>       
+        </div>
+    </section>
+
+    <section class="section-contact">
+            <!-- <div class="contact-label-wrapper">
+                <div class="contact-label">
+                    <div>Contact</div>
+                    <div class="hollow-text">Contact</div>
+                    <div>Contact</div>
+                </div>
+            </div>           -->
+            
+
+            <div class="heading-primary">
+                Let's get in touch
+            </div>
+
+            <div class="contact-container">
+                <div class="contact-text">
+                    Have a project in mind ? Would you like to share it ? </br>
+                    Feel free to reach out by writing an email on </br>
+                    <strong class="contact-email">aashryap@gmail.com</strong>
+                </div>
+                <div class="contact-image">
+                    <img src="assets/images/fist-bump.gif" style="width: 30rem" /> 
+                </div>
+            </div>
+
+            
+
+            <!-- <div class="contact-form">
+                <div class="contact-text">
+                    Have a project in mind ? Would you like to share it ? </br>
+                    Feel free to reach out by writing an email on </br>
+                    <strong class="contact-email">aashryap@gmail.com</strong>
+                </div>
+            </div> -->
+    </section>  
+
+
+    <script>
+
+        window.onload = () => {
+            let flickr =  document.querySelectorAll('.flicker');
+            setInterval(() => {
+                for(let i=0;i<flickr.length;i++) {
+                    if(Math.floor(Math.random() * 10) / 2 === 0) {
+                        flickr[i].style.display = 'none';
+                    } else {
+                        flickr[i].style.display = 'block';
+                    }
+                }
+            }, 10);
+        }
+        window.addEventListener('scroll', function(e) {
+            const target = document.querySelectorAll('.scroll');
+            let scrolled = window.pageYOffset;
+            let index = 0, length = target.length;
+            for(index;index<length; index++) 
+            {  
+                if(target[index].dataset.direction === 'vertical') {
+                    let pos = window.pageYOffset * target[index].dataset.ratey;
+                    target[index].style.transform = 'translate3d(0px,'+pos+'px, 0px)';
+                } else {
+                    let posX = 0;
+                    let posY = 0
+                    if(target[index].dataset.ratex) {
+                        posX = window.pageYOffset * target[index].dataset.ratex;
+                    } 
+                    if(target[index].dataset.ratey) {
+                        posY = window.pageYOffset * target[index].dataset.ratey;
+                    }
+                    target[index].style.transition = 'all .5s ease';
+                    target[index].style.transform = 'translate3d('+posX+'px,'+posY+'px, 0px)';
+                }
+            }
+        });
+    </script>
+</body>
+</html>

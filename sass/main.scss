@@ -1,0 +1,268 @@
+
+$font-color-primary: white;
+$font-color-secondary: #ff414e;
+$font-primary: 'Nunito', sans-serif;
+$font-secondary: 'Fjalla One', sans-serif;
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+    font-size: 62.5%;
+    background-color: black;
+    color: $font-color-primary;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+.justify-flex-start {
+    justify-content: flex-start !important;
+}
+
+.heading-primary {
+    font-size: 5rem;
+    color: $font-color-secondary;
+    font-family: $font-secondary;
+}
+
+
+.header {
+    display: flex;
+    margin-top: 3rem;
+    font-size: 0.8rem;
+    padding: 0 3rem;
+    z-index: 100;
+    ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        list-style-type: none;
+    }
+
+    &-1 {
+        float: left;
+        position: fixed;
+        left: 3rem;
+        width: 10%;
+    }
+    &-2 {
+        float: left;
+        font-size: 1.2rem;
+        position: relative;
+        left: calc(25%);
+    }
+    &-3 {
+        width: 10%;
+        float: left;
+        position: fixed;
+        left: calc(70%);
+    }
+    &-4 {
+        float: right;
+        position: fixed;
+        right: 3rem;
+    }
+}
+
+
+.section-2 {
+    height: 100vh;
+}
+
+.p-s-3 {
+    padding: 0 3rem;
+}
+
+.section-3 {
+    position: relative;
+    height: 100vh;
+    .image-container {
+        height: 100vh;
+        margin-left: 25%;
+        background-image: url(../assets/images/bg-removebg-preview.png);
+        width: 40%;
+        background-position: center top;
+        background-size: cover;
+    }
+
+    .text-container {
+        position: absolute;
+        top: 20%;
+        word-spacing: 3rem;
+        white-space: nowrap;
+        z-index: -2;
+    }
+    .marq {
+        font-family: $font-secondary;
+        color: $font-color-secondary;
+        font-size: 10.1vw;;
+        letter-spacing: 0.4rem;
+        text-transform: uppercase;
+   }  
+}
+
+.section-company {
+    position: relative;
+    // border: 1px solid yellow;
+    .heading-primary {
+        text-align: end;
+    }
+    .work-label {
+        font-family: $font-secondary;
+        font-size: 6rem;
+        font-weight: 900;
+        position: absolute;
+        right: 20%;
+        top: -5rem;
+        .hollow-text {
+            color: $font-color-secondary;
+        }
+    }
+
+    .company {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        padding: 40px;
+        
+        .company-container {
+            display: flex;
+            flex-direction: row;
+            flex: 1;
+            justify-content: space-between;
+            margin-bottom: 2rem;;
+        }
+
+        .duration-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            // flex-direction: row;
+            color: $font-color-secondary;
+            font-size: 2rem;
+            width: 40%;
+
+            .date {
+                font-family: $font-secondary;
+                font-size: 1.2rem;
+                display: block;
+                width: 100%;
+            }
+
+            .description {
+                font-size: 1.5rem;
+                color: $font-color-primary;
+            }
+        }
+
+        .image-section {
+            width: 40%;
+            display: flex;
+            background-position: center;
+            background-size: cover;
+            width: 30rem;
+            height: 30rem;
+            font-size: 2rem;
+            position: relative;
+        }
+
+        %after-shared {
+            position: absolute;
+            color: $font-color-secondary;
+            letter-spacing: 5px;
+            font-family: $font-secondary;
+            background-color: black;
+            padding: 15px;
+            // mix-blend-mode:difference
+        }
+
+        .company-1 {
+            // background-image: linear-gradient(to right, #0075f6, #0075f6);
+            background-image: url('../assets/images/computer1.gif');
+            &::after{
+                content: "Amdocs Technologies";
+                position: absolute;
+                top:20%;
+                right: 0;
+                transform: translateY(-50%) translateX(50%);
+                @extend %after-shared;
+            }
+        }  
+
+        .company-2 {
+            // background-image: linear-gradient(to right, #a7d129, #a7d129);
+            background-image: url('../assets/images/computer2.gif');
+            align-self: flex-end;
+            &::after{
+                content: "Worldwide Softwares";
+                position: absolute;
+                top: 20%;
+                left: 0;
+                transform: translateY(-50%) translateX(-50%);
+                @extend %after-shared;
+            }
+        }  
+        .company-3 {
+            // background-image: linear-gradient(to right, #e8f79a, #e8f79a);
+            background-image: url('../assets/images/computer3.gif');
+            &::after{
+                content: "Codezilla Technologies";
+                position: absolute;
+                top: 20%;
+                right: 0;
+                transform: translateY(-50%) translateX(50%);
+                @extend %after-shared;
+            }
+        }  
+    }
+}
+
+.section-contact {
+    padding: 40px;
+
+    .contact-text {
+        font-size: 1.2rem;
+    }
+
+    .contact-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .contact-image {
+        width: 30rem;
+    }
+
+    .contact-label {
+        float: left;
+        font-family: $font-secondary;
+        font-size:7rem;
+        font-weight: 900;
+        margin-left: 10%;
+        width: 30%; 
+        .hollow-text {
+            color: $font-color-secondary;
+        }
+    }
+
+    .contact-form {
+        font-size: 2rem;
+        float: left;
+        position: relative;
+        padding: 3rem;
+        margin-top: 6rem;
+        .contact-email {
+            color : $font-color-secondary
+        }
+    }
+}
+
+ 
+
