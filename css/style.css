@@ -9,6 +9,13 @@ body {
   color: white;
   font-family: 'Nunito', sans-serif; }
 
+::-webkit-scrollbar {
+  width: 10px; }
+
+::-webkit-scrollbar-thumb {
+  background: #ff414e;
+  border-radius: 10px; }
+
 .justify-flex-start {
   justify-content: flex-start !important; }
 

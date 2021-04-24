@@ -17,6 +17,17 @@ body {
 }
 
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+   
+  
+::-webkit-scrollbar-thumb {
+    background: $font-color-secondary; 
+    border-radius: 10px;
+}
+
 .justify-flex-start {
     justify-content: flex-start !important;
 }
