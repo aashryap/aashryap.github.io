@@ -6,7 +6,7 @@
     <title>Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css" defer>
 </head>
 <body>
     <header class="header"> 
@@ -54,6 +54,10 @@
             </div>
     </header>
 
+    <section class="section-header">
+        Hello! I am <span class="text-type" data-words='Aashrya Pandya, a developer, also a gamer'></span>
+    </section>
+
     <section class="section-3 scroll p-s-3">
             <div class="text-container" data-rateY="-2"  data-direction="horizontal">
                 <div class="marq scroll" data-rateX="0.2" data-direction="horizontal">
@@ -78,12 +82,22 @@
                 <div class="duration-section"> 
                     <div class="date">July 2019 - Current</div>
                     <div class="description">Currently working as senior front end developer on enterprise level telecom project. Working on tech such as React, Redux, SCSS, Webpack.</div>
+                    <div class="button-container">
+                        <span id="id" class="plane"> 
+                            >
+                        </span>
+                    </div>
                 </div>
             </div>  
             <div class="company-container">
                 <div class="duration-section"> 
                     <div class="date"> Nov 2018 - July 2019 </div>
                     <div class="description"> Worked as a fullstack developer and wrote very fast shipping code for various project. Worked on tech such as Nodejs, React native, React, Redux, CSS, SQL.</div>
+                    <div class="button-container">
+                        <span id="id" class="plane"> 
+                            >
+                        </span>
+                    </div>
                 </div>
                 <div class="image-section company-2"></div>
             </div>
@@ -92,6 +106,11 @@
                 <div class="duration-section"> 
                     <div class="date">Jan 2018  - Nov 2018</div>
                     <div class="description">Worked as a fullstack developer and worked on many projects using technology such as Nodejs, Mongodb, SQL, React, Redux, CSS.</div>
+                    <div class="button-container">
+                        <span id="id" class="plane"> 
+                            >
+                        </span>
+                    </div>
                 </div>
             </div>       
         </div>
@@ -172,5 +191,6 @@
             }
         });
     </script>
+    <script src="./index.js" />
 </body>
 </html>
