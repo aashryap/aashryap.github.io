@@ -134,11 +134,11 @@ body {
         color: white;
         margin-top: 2rem; }
     .section-company .company .image-section {
-      width: 40%;
+      width: 30%;
       display: flex;
       background-position: center;
       background-size: cover;
-      width: 30rem;
+      width: 25rem;
       height: 30rem;
       font-size: 2rem;
       position: relative; }
